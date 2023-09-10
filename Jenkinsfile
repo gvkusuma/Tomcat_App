@@ -6,7 +6,7 @@ pipeline
         {
         steps{
             echo "Build the project"
-            sh 'mvn -f pom.xml clean package'
+            sh 'mvn clean package'
         }
         post{
             success 
