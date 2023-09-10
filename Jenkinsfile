@@ -4,15 +4,21 @@ pipeline
     stages{ 
         stage('Init')
         {
-           echo "Starting the pipeline testing"
+	steps{
+            echo "Starting the pipeline testing"
+	    }
         }
         stage('Build')
         {
+	steps{
             echo "Build the project"
         }
+	}
         stage('Deploy')
         {
+	steps{
             echo "Deploy the project"
         }
+	}
     }
 }
