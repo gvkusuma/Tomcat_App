@@ -30,6 +30,12 @@ pipeline
             {
                 input message:"Approve production deployment"
             }
+ step([  $class: 'CopyArtifact',
+                filter: 'test.zip',
+                fingerprintArtifacts: true,
+                projectName: 'My_tomcat_app',
+                selector: [$class: 'SpecificBuildSelector', buildNumber: '${BUILD_NUMBER}']
+        ])  
             echo "Deploy the project"
             build job: 'Deploy_prod_tomcat_app'
         }
