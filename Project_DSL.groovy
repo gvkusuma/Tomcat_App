@@ -3,7 +3,7 @@ job('First_Maven_DSL_project')
     description("First project dsl")
     scm
     {
-       git('https://github.com/gvkusuma/Tomcat_App.git',master)
+       git('https://github.com/gvkusuma/Tomcat_App.git')
     }
     triggers
     {
