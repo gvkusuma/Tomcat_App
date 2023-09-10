@@ -31,7 +31,7 @@ pipeline
                 input message:"Approve production deployment"
             }
             echo "Deploy the project"
-            build job: 'Deploy_staging_app'
+            build job: 'Deploy_prod_tomcat_app'
         }
         }
     }
