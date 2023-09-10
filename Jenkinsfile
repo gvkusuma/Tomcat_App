@@ -31,7 +31,7 @@ pipeline
                 input message:"Approve production deployment"
             }
  step([  $class: 'CopyArtifact',
-                filter: 'test.zip',
+                filter: 'java-tomcat-maven-example.war',
                 fingerprintArtifacts: true,
                 projectName: 'My_tomcat_app',
                 selector: [$class: 'SpecificBuildSelector', buildNumber: '${BUILD_NUMBER}']
