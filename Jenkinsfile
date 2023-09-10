@@ -33,8 +33,7 @@ pipeline
  step([  $class: 'CopyArtifact',
                 filter: 'java-tomcat-maven-example.war',
                 fingerprintArtifacts: true,
-                projectName: 'My_tomcat_app',
-                selector: [$class: 'SpecificBuildSelector', buildNumber: '${BUILD_NUMBER}']
+                projectName: 'My_tomcat_app'
         ])  
             echo "Deploy the project"
             build job: 'Deploy_prod_tomcat_app'
