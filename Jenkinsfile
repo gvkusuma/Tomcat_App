@@ -30,12 +30,7 @@ pipeline
             {
                 input message:"Approve production deployment"
             }
- step([  $class: 'CopyArtifact',
-                filter: 'java-tomcat-maven-example.war',
-                fingerprintArtifacts: true,
-                projectName: 'My_tomcat_app'
-        ])  
-            echo "Deploy the project"
+          echo "Deploy the project"
             build job: 'Deploy_prod_tomcat_app'
         }
         }
